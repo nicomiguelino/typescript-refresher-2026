@@ -1,26 +1,26 @@
-interface Contact {
+interface OldContact {
   id: number
   name: string
   transformed?: boolean
 }
 
-function addAttribute(source: Contact): Contact {
+function addAttribute(source: OldContact): OldContact {
   return {
     ...source,
     transformed: true
   }
 }
 
-function clone(source: Contact, transform?: (contact: Contact) => Contact): Contact {
+function oldClone(source: OldContact, transform?: (contact: OldContact) => OldContact): OldContact {
   return Object.apply({}, [transform ? transform(source) : source])
 }
 
-const a: Contact = {
+const a: OldContact = {
   id: 42,
   name: 'Douglas Adams'
 }
 
-const b = clone(a, addAttribute)
+const b = oldClone(a, addAttribute)
 
 console.log(a)
 console.log(b)

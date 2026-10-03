@@ -1,0 +1,11 @@
+{
+  "name": "interfaces",
+  "private": true,
+  "dependencies": {
+    "typescript": "^7.0.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "type-check": "tsc --noEmit"
+  }
+}

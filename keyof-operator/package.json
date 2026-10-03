@@ -1,0 +1,13 @@
+{
+  "name": "keyof-operator",
+  "private": true,
+  "dependencies": {
+    "typescript": "^7.0.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "type-check": "tsc --noEmit",
+    "preexec": "tsc",
+    "exec": "node dist/main.js"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "typescript": "^7.0.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "type-check": "tsc --noEmit",
+    "preexec": "tsc",
+    "exec": "node dist/main"
+  },
+  "imports": {
+    "#/*": "./dist/*.js"
+  }
+}
